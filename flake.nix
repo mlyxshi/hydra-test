@@ -9,13 +9,13 @@
       hydraJobs."tree" = pkgs.tree;
       hydraJobs."tree_x64" = nixpkgs.legacyPackages.x86_64-linux.tree;
       hydraJobs."text" = pkgs.runCommand "readme" { } ''
-        echo hello world
+        echo hello world!
         mkdir -p $out/
         echo "Hello world" > $out/readme
       '';
       
       hydraJobs."text_x64" = nixpkgs.legacyPackages.x86_64-linux.runCommand "readme" { } ''
-        echo hello world
+        echo hello world!
         mkdir -p $out/
         echo "Hello world" > $out/readme
       '';
