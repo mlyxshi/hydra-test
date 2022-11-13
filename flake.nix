@@ -13,6 +13,12 @@
         mkdir -p $out/
         echo "Hello world" > $out/readme
       '';
+      
+      hydraJobs."text_x64" = nixpkgs.legacyPackages.x86_64-linux.runCommand "readme" { } ''
+        echo hello world
+        mkdir -p $out/
+        echo "Hello world" > $out/readme
+      '';
     };
 
 }
