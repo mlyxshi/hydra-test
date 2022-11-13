@@ -6,8 +6,7 @@
       pkgs = nixpkgs.legacyPackages.aarch64-linux;
     in
     {
-
-      hydraJobs."tree" = nixpkgs.legacyPackages.x86_64-linux.tree;
+      hydraJobs."tree" = pkgs.tree;
       hydraJobs."text" = pkgs.runCommand "readme" { } ''
         echo hello world
         mkdir -p $out/
